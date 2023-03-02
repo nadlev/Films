@@ -21,5 +21,10 @@
 			</array>
 		</dict>
 	</dict>
+	<key>APIKeys</key>
+	<dict>
+		<key>TMDB</key>
+		<string>2f99987884ef38244acbd5a2066cdf47</string>
+	</dict>
 </dict>
 </plist>
