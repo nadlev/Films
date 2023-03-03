@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB5614B829B0AEC2009D8D28 /* TitleSearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614B729B0AEC2009D8D28 /* TitleSearchResultController.swift */; };
+		EB5614BA29B0AED4009D8D28 /* TitleSearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614B929B0AED4009D8D28 /* TitleSearchResultViewModel.swift */; };
+		EB5614BC29B0AEE5009D8D28 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614BB29B0AEE5009D8D28 /* SearchRouter.swift */; };
+		EB5614BE29B0AEF6009D8D28 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614BD29B0AEF6009D8D28 /* SearchViewController.swift */; };
+		EB5614C029B0AF0A009D8D28 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614BF29B0AF0A009D8D28 /* SearchViewModel.swift */; };
+		EB5614C229B0D353009D8D28 /* TitlePreviewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614C129B0D353009D8D28 /* TitlePreviewCellViewModel.swift */; };
+		EB5614C429B0D364009D8D28 /* TitlePreviewTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614C329B0D364009D8D28 /* TitlePreviewTableCellView.swift */; };
+		EB5614C629B1023B009D8D28 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614C529B1023B009D8D28 /* UINavigationBar.swift */; };
+		EB5614C829B1352D009D8D28 /* TitlePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614C729B1352D009D8D28 /* TitlePageViewModel.swift */; };
+		EB5614CA29B1353A009D8D28 /* TitlePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614C929B1353A009D8D28 /* TitlePageViewController.swift */; };
+		EB5614CC29B13549009D8D28 /* TitlePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614CB29B13549009D8D28 /* TitlePageRouter.swift */; };
+		EB5614CE29B1F96E009D8D28 /* YouTubeAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614CD29B1F96E009D8D28 /* YouTubeAPIManager.swift */; };
+		EB5614D029B1F97F009D8D28 /* YouTubeDataExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614CF29B1F97F009D8D28 /* YouTubeDataExtractor.swift */; };
+		EB5614D229B1F98E009D8D28 /* YouTubeVideoExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614D129B1F98E009D8D28 /* YouTubeVideoExtractor.swift */; };
+		EB5614D429B2215B009D8D28 /* UpcomingTitlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614D329B2215B009D8D28 /* UpcomingTitlesViewModel.swift */; };
+		EB5614D629B2216C009D8D28 /* UpcomingTitlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614D529B2216C009D8D28 /* UpcomingTitlesViewController.swift */; };
+		EB5614D829B22179009D8D28 /* UpcomingTitlesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614D729B22179009D8D28 /* UpcomingTitlesRouter.swift */; };
+		EB5614DA29B2218A009D8D28 /* BookmarksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614D929B2218A009D8D28 /* BookmarksRouter.swift */; };
+		EB5614DC29B22196009D8D28 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614DB29B22196009D8D28 /* BookmarksViewController.swift */; };
+		EB5614DE29B221A4009D8D28 /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614DD29B221A4009D8D28 /* BookmarksViewModel.swift */; };
 		EBE998B62987EBD400C1D275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE998B52987EBD400C1D275 /* AppDelegate.swift */; };
 		EBE998B82987EBD400C1D275 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE998B72987EBD400C1D275 /* SceneDelegate.swift */; };
 		EBE998BA2987EBD400C1D275 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE998B92987EBD400C1D275 /* ViewController.swift */; };
@@ -43,6 +63,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB5614B729B0AEC2009D8D28 /* TitleSearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSearchResultController.swift; sourceTree = "<group>"; };
+		EB5614B929B0AED4009D8D28 /* TitleSearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSearchResultViewModel.swift; sourceTree = "<group>"; };
+		EB5614BB29B0AEE5009D8D28 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		EB5614BD29B0AEF6009D8D28 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EB5614BF29B0AF0A009D8D28 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		EB5614C129B0D353009D8D28 /* TitlePreviewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewCellViewModel.swift; sourceTree = "<group>"; };
+		EB5614C329B0D364009D8D28 /* TitlePreviewTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewTableCellView.swift; sourceTree = "<group>"; };
+		EB5614C529B1023B009D8D28 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		EB5614C729B1352D009D8D28 /* TitlePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePageViewModel.swift; sourceTree = "<group>"; };
+		EB5614C929B1353A009D8D28 /* TitlePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePageViewController.swift; sourceTree = "<group>"; };
+		EB5614CB29B13549009D8D28 /* TitlePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePageRouter.swift; sourceTree = "<group>"; };
+		EB5614CD29B1F96E009D8D28 /* YouTubeAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeAPIManager.swift; sourceTree = "<group>"; };
+		EB5614CF29B1F97F009D8D28 /* YouTubeDataExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeDataExtractor.swift; sourceTree = "<group>"; };
+		EB5614D129B1F98E009D8D28 /* YouTubeVideoExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeVideoExtractor.swift; sourceTree = "<group>"; };
+		EB5614D329B2215B009D8D28 /* UpcomingTitlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTitlesViewModel.swift; sourceTree = "<group>"; };
+		EB5614D529B2216C009D8D28 /* UpcomingTitlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTitlesViewController.swift; sourceTree = "<group>"; };
+		EB5614D729B22179009D8D28 /* UpcomingTitlesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTitlesRouter.swift; sourceTree = "<group>"; };
+		EB5614D929B2218A009D8D28 /* BookmarksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksRouter.swift; sourceTree = "<group>"; };
+		EB5614DB29B22196009D8D28 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		EB5614DD29B221A4009D8D28 /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
 		EBE998B22987EBD400C1D275 /* FilmsNadTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmsNadTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE998B52987EBD400C1D275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE998B72987EBD400C1D275 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +132,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB5614B629B0AEA0009D8D28 /* SearchResultModel */ = {
+			isa = PBXGroup;
+			children = (
+				EB5614B729B0AEC2009D8D28 /* TitleSearchResultController.swift */,
+				EB5614B929B0AED4009D8D28 /* TitleSearchResultViewModel.swift */,
+			);
+			path = SearchResultModel;
+			sourceTree = "<group>";
+		};
 		EBE998A92987EBD400C1D275 = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +171,6 @@
 				EBE998CE2987EC1800C1D275 /* Service */,
 				EBE998CD2987EC0B00C1D275 /* Extension */,
 				EBE998CC2987EBEF00C1D275 /* Supporting */,
-				EBE998B52987EBD400C1D275 /* AppDelegate.swift */,
-				EBE998B72987EBD400C1D275 /* SceneDelegate.swift */,
 				EBE998B92987EBD400C1D275 /* ViewController.swift */,
 				EBE998BB2987EBD400C1D275 /* Main.storyboard */,
 				EBE998C62987EBDC00C1D275 /* Info.plist */,
@@ -145,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE99905298D076D00C1D275 /* Extension + CAGradientLayer.swift */,
+				EB5614C529B1023B009D8D28 /* UINavigationBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -171,6 +219,8 @@
 		EBE998D02987EC3100C1D275 /* AppFile */ = {
 			isa = PBXGroup;
 			children = (
+				EBE998B52987EBD400C1D275 /* AppDelegate.swift */,
+				EBE998B72987EBD400C1D275 /* SceneDelegate.swift */,
 			);
 			path = AppFile;
 			sourceTree = "<group>";
@@ -212,6 +262,9 @@
 		EBE998DF298818A600C1D275 /* BookmarkModule */ = {
 			isa = PBXGroup;
 			children = (
+				EB5614D929B2218A009D8D28 /* BookmarksRouter.swift */,
+				EB5614DB29B22196009D8D28 /* BookmarksViewController.swift */,
+				EB5614DD29B221A4009D8D28 /* BookmarksViewModel.swift */,
 			);
 			path = BookmarkModule;
 			sourceTree = "<group>";
@@ -219,6 +272,9 @@
 		EBE998E0298818BA00C1D275 /* UpcomingTitleModule */ = {
 			isa = PBXGroup;
 			children = (
+				EB5614D729B22179009D8D28 /* UpcomingTitlesRouter.swift */,
+				EB5614D529B2216C009D8D28 /* UpcomingTitlesViewController.swift */,
+				EB5614D329B2215B009D8D28 /* UpcomingTitlesViewModel.swift */,
 			);
 			path = UpcomingTitleModule;
 			sourceTree = "<group>";
@@ -226,6 +282,10 @@
 		EBE998E1298818CA00C1D275 /* SearchModule */ = {
 			isa = PBXGroup;
 			children = (
+				EB5614BB29B0AEE5009D8D28 /* SearchRouter.swift */,
+				EB5614BD29B0AEF6009D8D28 /* SearchViewController.swift */,
+				EB5614BF29B0AF0A009D8D28 /* SearchViewModel.swift */,
+				EB5614B629B0AEA0009D8D28 /* SearchResultModel */,
 			);
 			path = SearchModule;
 			sourceTree = "<group>";
@@ -233,6 +293,9 @@
 		EBE998E2298818D500C1D275 /* TitlePageModule */ = {
 			isa = PBXGroup;
 			children = (
+				EB5614C729B1352D009D8D28 /* TitlePageViewModel.swift */,
+				EB5614C929B1353A009D8D28 /* TitlePageViewController.swift */,
+				EB5614CB29B13549009D8D28 /* TitlePageRouter.swift */,
 			);
 			path = TitlePageModule;
 			sourceTree = "<group>";
@@ -289,6 +352,9 @@
 		EBE99904298BD1D100C1D275 /* YouTube */ = {
 			isa = PBXGroup;
 			children = (
+				EB5614CD29B1F96E009D8D28 /* YouTubeAPIManager.swift */,
+				EB5614CF29B1F97F009D8D28 /* YouTubeDataExtractor.swift */,
+				EB5614D129B1F98E009D8D28 /* YouTubeVideoExtractor.swift */,
 			);
 			path = YouTube;
 			sourceTree = "<group>";
@@ -321,6 +387,8 @@
 		EBE9990E298D39F300C1D275 /* TitlePreviewCell */ = {
 			isa = PBXGroup;
 			children = (
+				EB5614C329B0D364009D8D28 /* TitlePreviewTableCellView.swift */,
+				EB5614C129B0D353009D8D28 /* TitlePreviewCellViewModel.swift */,
 			);
 			path = TitlePreviewCell;
 			sourceTree = "<group>";
@@ -396,17 +464,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB5614CC29B13549009D8D28 /* TitlePageRouter.swift in Sources */,
 				EBE998F0298BCCBF00C1D275 /* TitlesHeaderViewViewModel.swift in Sources */,
+				EB5614C829B1352D009D8D28 /* TitlePageViewModel.swift in Sources */,
+				EB5614C029B0AF0A009D8D28 /* SearchViewModel.swift in Sources */,
 				EBE998BA2987EBD400C1D275 /* ViewController.swift in Sources */,
 				EBE998F4298BCEBA00C1D275 /* TitleActionsViewModelProtocol.swift in Sources */,
 				EBE99906298D076D00C1D275 /* Extension + CAGradientLayer.swift in Sources */,
 				EBE99901298BD1B000C1D275 /* TMDBAPIManager.swift in Sources */,
 				EBE998D72987EF4B00C1D275 /* TMDBTitle.swift in Sources */,
+				EB5614C429B0D364009D8D28 /* TitlePreviewTableCellView.swift in Sources */,
+				EB5614D229B1F98E009D8D28 /* YouTubeVideoExtractor.swift in Sources */,
 				EBE998D92987EF5A00C1D275 /* YouTubeVideo.swift in Sources */,
 				EBE99903298BD1C000C1D275 /* TMDBDataExtractor.swift in Sources */,
+				EB5614D829B22179009D8D28 /* UpcomingTitlesRouter.swift in Sources */,
+				EB5614DC29B22196009D8D28 /* BookmarksViewController.swift in Sources */,
 				EBE999622991458500C1D275 /* TitleCellActionsBuilder.swift in Sources */,
+				EB5614DE29B221A4009D8D28 /* BookmarksViewModel.swift in Sources */,
 				EBE998F9298BD10B00C1D275 /* NetworkService.swift in Sources */,
 				EBE99916298D45EB00C1D275 /* TitlesListCellViewModel.swift in Sources */,
+				EB5614CA29B1353A009D8D28 /* TitlePageViewController.swift in Sources */,
+				EB5614C629B1023B009D8D28 /* UINavigationBar.swift in Sources */,
 				EBE99910298D3DD400C1D275 /* TitleGroupCell.swift in Sources */,
 				EBE998D52987EE5B00C1D275 /* AssemblyBuilder.swift in Sources */,
 				EBE9990A298D39B000C1D275 /* TitlePageBackgroundView.swift in Sources */,
@@ -414,18 +492,28 @@
 				EBE999642991459F00C1D275 /* TitleCellContextMenuBuilder.swift in Sources */,
 				EBE998C02987EBD400C1D275 /* FilmsNadTT.xcdatamodeld in Sources */,
 				EBE998FB298BD12400C1D275 /* NetworkDataExtractor.swift in Sources */,
+				EB5614DA29B2218A009D8D28 /* BookmarksRouter.swift in Sources */,
+				EB5614D029B1F97F009D8D28 /* YouTubeDataExtractor.swift in Sources */,
 				EBE99914298D45BA00C1D275 /* TitlesListCell.swift in Sources */,
 				EBE998F2298BCE9C00C1D275 /* ViewModelRouteDelegate.swift in Sources */,
+				EB5614D429B2215B009D8D28 /* UpcomingTitlesViewModel.swift in Sources */,
+				EB5614BE29B0AEF6009D8D28 /* SearchViewController.swift in Sources */,
+				EB5614C229B0D353009D8D28 /* TitlePreviewCellViewModel.swift in Sources */,
+				EB5614CE29B1F96E009D8D28 /* YouTubeAPIManager.swift in Sources */,
 				EBE998B62987EBD400C1D275 /* AppDelegate.swift in Sources */,
 				EBE99912298D3DEE00C1D275 /* TitlesGroupCellViewModel.swift in Sources */,
 				EBE998FE298BD15800C1D275 /* APIKeysManager.swift in Sources */,
 				EBE998E52988194E00C1D275 /* HomePageRouter.swift in Sources */,
+				EB5614BC29B0AEE5009D8D28 /* SearchRouter.swift in Sources */,
 				EBE998E9298BCB2600C1D275 /* HomePageViewController.swift in Sources */,
 				EBE998B82987EBD400C1D275 /* SceneDelegate.swift in Sources */,
 				EBE998EE298BCCA100C1D275 /* TitleHeaderView.swift in Sources */,
 				EBE998EB298BCB9000C1D275 /* HomePageViewModel.swift in Sources */,
+				EB5614BA29B0AED4009D8D28 /* TitleSearchResultViewModel.swift in Sources */,
 				EBE998F6298BD07C00C1D275 /* StorageManager.swift in Sources */,
 				EBE99908298D394300C1D275 /* MainTabBarController.swift in Sources */,
+				EB5614B829B0AEC2009D8D28 /* TitleSearchResultController.swift in Sources */,
+				EB5614D629B2216C009D8D28 /* UpcomingTitlesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

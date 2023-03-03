@@ -30,6 +30,35 @@ protocol AssemblyBuilderProtocol {
 class AssemblyBuilder: AssemblyBuilderProtocol {
     
     func createHomePageModule() -> UIViewController {
-        let view = 
+        let view = HomePageViewController()
+        let router = HomePageRouter(baseViewController: view, assemblyBuilder: self)
+        let homePageViewModel = HomePageViewModel(router: router)
+        view.viewModel = homePageViewModel
+        return view
+    }
+    
+    func createSearchModule() -> UIViewController {
+        let view = SearchViewController()
+        let router = SearchRouter(baseViewController: view, assemblyBuilder: self)
+        let searchViewModel = SearchViewModel(router: router)
+        view.viewModel = searchViewModel
+        return UINavigationController(rootViewController: view)
+    }
+    
+    func createTitlePageModule(title: TMDBTitle) -> UIViewController {
+        let view = TitlePageViewController()
+        let router = TitlePageRouter(baseViewController: view, assemblyBuilder: self)
+        let titlePageViewModel = TitlePageViewModel(title: title, router: router)
+        view.viewModel = titlePageViewModel
+        return view
+    }
+    
+    func createUpcomingTitlesModule() -> UIViewController {
+        
+    }
+    
+    
+    func createBookmarksModule() -> UIViewController {
+        
     }
 }

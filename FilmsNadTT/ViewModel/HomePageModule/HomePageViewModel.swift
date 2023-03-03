@@ -12,8 +12,8 @@ import Foundation
 protocol HomePageViewModelProtocol {
     var numberOfSections: Int { get }
     func titleForCell(at index: Int) -> String?
-    func viewModelForCell(at section: Int) ->
-    func viewModelForHeaderCoverView() ->
+    func viewModelForCell(at section: Int) -> TitlesGroupCellViewModelProtocol
+    func viewModelForHeaderCoverView() -> TitlesHeaderViewViewModel
     func goToSearch()
 }
 
@@ -64,7 +64,37 @@ class HomePageViewModel: HomePageViewModelProtocol {
         return category.name.uppercased()
     }
     
-    func viewModelForCell(at section: Int) ->{
-        <#code#>
+    func viewModelForCell(at section: Int) -> TitlesGroupCellViewModelProtocol {
+        let category = setupCategory(for: section)
+        return setupTitleGroupCellViewModel(with: category)
+    }
+    
+    func viewModelForHeaderCoverView() -> TitlesHeaderViewViewModel {
+        let viewModel = TitlesHeaderViewViewModel()
+        viewModel.delegate = self
+        return viewModel
+    }
+    
+    func goToSearch() {
+        router.present(module: .search, animated: true, context: nil, completion: nil)
+    }
+    
+    private func setupCategory(for section: Int) -> TitlesCategory {
+        guard let titlesSection = TitlesSection(rawValue: section) else {
+            return .popularTVs
+        }
+        return titlesSection.category
+    }
+    
+    private func setupTitleGroupCellViewModel(with category: TitlesCategory) -> TitlesGroupCellViewModel {
+        let viewModel = TitlesGroupCellViewModel(titlesCategory: category)
+        viewModel.delegate = self
+        return viewModel
+    }
+}
+
+extension HomePageViewModel: ViewModelRouteDelegate {
+    func showTitlePage(with title: TMDBTitle) {
+        router.present(module: .titlePage, animated: true, context: title, completion: nil)
     }
 }
