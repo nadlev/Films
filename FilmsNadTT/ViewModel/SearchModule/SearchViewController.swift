@@ -22,7 +22,7 @@ class SearchViewController: UIViewController {
     private lazy var magnifyingglassImageView: UIImageView = {
         let imageView = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: 80, height: 80)))
         imageView.image = UIImage(systemName: "magnifyingglass", withConfiguration: UIImage.SymbolConfiguration(pointSize: 45))
-        imageView.tintColor = .orange
+        imageView.tintColor = UIColor(named: "AccentColor")
         return imageView
     }()
     

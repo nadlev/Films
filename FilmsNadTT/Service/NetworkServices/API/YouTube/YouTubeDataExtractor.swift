@@ -9,13 +9,19 @@ import Foundation
 
 class YouTubeDataExtractor {
     
-    private let apiManager: YouTubeApiManager
+    //MARK: Properties
+    
+    private let apiManager: YouTubeAPIManager
+    
+    //MARK: - Initialization
     
     init(apiKey: String) {
-        apiManager = YouTubeApiManager(apiKey: apiKey)
+        apiManager = YouTubeAPIManager(apiKey: apiKey)
     }
     
-    func searchVideo(query: String, completion: @escaping(VideoComponents?) -> Void) {
+    //MARK: - Methods
+    
+    func searchVideo(query: String, completion: @escaping (VideoComponents?) -> Void) {
         apiManager.searchVideo(query: query) { data, error in
             guard let strongData = data, error == nil else {
                 completion(nil)
@@ -28,9 +34,11 @@ class YouTubeDataExtractor {
         }
     }
     
+    //MARK: - Private methods
+    
     private func decodeJSON<T: Decodable>(type: T.Type, from data: Data?) -> T? {
         guard let data = data else { return nil }
-        
+
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
             return result

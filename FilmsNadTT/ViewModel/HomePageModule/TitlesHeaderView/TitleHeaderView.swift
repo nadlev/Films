@@ -11,7 +11,7 @@ class TitleHeaderView: UIView {
 
   // MARK: PROPERTIES
     
-    var viewModel: TitlesHeaderViewViewModelProtocol {
+    var viewModel: TitlesHeaderViewViewModelProtocol! {
         didSet {
             viewModel.fetchTitle { [unowned self] in
                 updateUI()
@@ -60,7 +60,7 @@ class TitleHeaderView: UIView {
         button.tintColor = .black
         button.setTitle("LEARN MORE", for: .normal)
         button.setImage(UIImage(systemName: "ellipsis.circle.fill"), for: .normal)
-        button.backgroundColor = .orange
+        button.backgroundColor = UIColor(named: "AccentColor")
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
@@ -85,7 +85,7 @@ class TitleHeaderView: UIView {
         super.layoutSubviews()
         headerShadowGradient.frame = coverImageView.bounds
         coverImageView.frame = self.bounds
-        
+        setConstraints()
     }
     
     @objc private func detailedButtonDidTap() {

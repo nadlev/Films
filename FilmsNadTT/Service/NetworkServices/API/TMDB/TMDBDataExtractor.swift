@@ -11,12 +11,12 @@ class TMDBDataExtractor {
     private let apiManager: TMDBAPIManager
     
     init(apiKey: String) {
-        self.apiManager = TMDBAPIManager(apiKey: apiKey)
+        apiManager = TMDBAPIManager(apiKey: apiKey)
     }
     
-    // MARK: - METHODS
+    //MARK: - Methods
     
-    func fetchTitles(category: TitlesCategory, completion: @escaping([TMDBTitle]?) -> Void) {
+    func fetchTitles(category: TitlesCategory, completion: @escaping ([TMDBTitle]?) -> Void) {
         apiManager.getTitles(category: category) { data, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -31,11 +31,11 @@ class TMDBDataExtractor {
             
             let titlesResult = self.decodeJSON(type: TitlesResult.self, from: data)
             completion(titlesResult?.results)
-            
+
         }
     }
     
-    func searchTitles(query: String, completion: @escaping([TMDBTitle]?) -> Void) {
+    func searchTitles(query: String, completion: @escaping ([TMDBTitle]?) -> Void) {
         apiManager.searchTitles(query: query) { data, error in
             if let error = error {
                 print(error.localizedDescription)
@@ -53,15 +53,17 @@ class TMDBDataExtractor {
         }
     }
     
-    func fetchImageData(from url: String, completion: @escaping(Data?) -> Void) {
+    func fetchImageData(from url: String, completion: @escaping (Data?) -> Void) {
         apiManager.fetchImage(from: url) { imageURL in
             NetworkDataManager.shared.fetchData(from: "\(imageURL)\(url)", completion: completion)
         }
     }
     
+    //MARK: - Private methods
+    
     private func decodeJSON<T: Decodable>(type: T.Type, from data: Data?) -> T? {
         guard let data = data else { return nil }
-        
+
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
             return result

@@ -15,14 +15,14 @@
 					<string>Default Configuration</string>
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
 				</dict>
 			</array>
 		</dict>
 	</dict>
 	<key>APIKeys</key>
 	<dict>
+		<key>YouTube</key>
+		<string>AIzaSyDJl7fd5sd59y3Qw-zp0sKn6YBpdYLML1c</string>
 		<key>TMDB</key>
 		<string>2f99987884ef38244acbd5a2066cdf47</string>
 	</dict>

@@ -73,20 +73,21 @@ fileprivate enum APIType {
     }
 }
 
+
 class TMDBAPIManager {
     
-    // MARK: - PROPERTIES
+    //MARK: Properties
     
     private let apiKey: String
     private let networkService = NetworkService()
     
-    // MARK: - INIT
+    //MARK: - Initialization
     
     init(apiKey: String) {
         self.apiKey = apiKey
     }
     
-    // MARK: - METHODS
+    //MARK: - Methods
     
     func getTitles(category: TitlesCategory, completion: @escaping (Data?, Error?) -> Void) {
         
@@ -99,6 +100,7 @@ class TMDBAPIManager {
         
         let task = networkService.createTask(with: url, completion: completion)
         task.resume()
+        print(url)
     }
     
     func searchTitles(query: String, completion: @escaping (Data?, Error?) -> Void) {
@@ -128,7 +130,7 @@ class TMDBAPIManager {
     private func prepareTitlesQueryParameters(apiKey: String, titleCategory: TitlesCategory) -> [String: String] {
         var parameters: [String: String] = [:]
         
-        parameters["api_-"] = apiKey
+        parameters["api_key"] = apiKey
         
         switch titleCategory {
         case .popularAnime, .popularAnimeMovies:
@@ -181,4 +183,3 @@ class TMDBAPIManager {
         }
     }
 }
-

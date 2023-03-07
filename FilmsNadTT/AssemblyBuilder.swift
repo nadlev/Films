@@ -54,11 +54,19 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
     }
     
     func createUpcomingTitlesModule() -> UIViewController {
-        
+        let view = UpcomingTitlesViewController()
+        let router = UpcomingTitlesRouter(baseViewController: view, assemblyBuilder: self)
+        let upcomingTitlesViewModel = UpcomingTitlesViewModel(router: router)
+        view.viewModel = upcomingTitlesViewModel
+        return view
     }
     
     
     func createBookmarksModule() -> UIViewController {
-        
+        let view = BookmarksViewController()
+        let router = BookmarksRouter(baseViewController: view, assemblyBuilder: self)
+        let bookmarksViewModel = BookmarksViewModel(router: router)
+        view.viewModel = bookmarksViewModel
+        return view
     }
 }

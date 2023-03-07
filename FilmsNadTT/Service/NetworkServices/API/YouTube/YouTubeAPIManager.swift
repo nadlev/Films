@@ -23,25 +23,40 @@ fileprivate enum YouTubeAPIType {
     }
 }
 
-class YouTubeApiManager {
+//MARK: - APIManagerYouTube
+
+class YouTubeAPIManager {
+    
+    //MARK: Properties
     
     private let apiKey: String
     private let networkService = NetworkService()
+    
+    //MARK: - Initialization
     
     init(apiKey: String) {
         self.apiKey = apiKey
     }
     
+    //MARK: - Methods
+    
     func searchVideo(query: String, completion: @escaping (Data?, Error?) -> Void) {
-        guard let url = networkService.createURL(scheme: YouTubeAPIBase.scheme.rawValue,
-                                                 host: YouTubeAPIBase.host.rawValue,
-                                                 path: YouTubeAPIType.video.path,
-                                                 queryParameters: prepareQueryParameters(query: query, key: apiKey))
-        else { return }
+        guard let url = networkService.createURL(
+            scheme: YouTubeAPIBase.scheme.rawValue,
+            host: YouTubeAPIBase.host.rawValue,
+            path: YouTubeAPIType.video.path,
+            queryParameters: prepareQueryParameters(
+                query: query,
+                key: apiKey
+            )
+        ) else { return }
         
         let task = networkService.createTask(with: url, completion: completion)
         task.resume()
+        print(url)
     }
+    
+    //MARK: - Private methods
     
     private func prepareQueryParameters(query: String, key: String) -> [String: String] {
         var parameters: [String: String] = [:]

@@ -15,12 +15,10 @@ enum APIKeyTypes: String {
 class APIKeyManager {
     func getAPIKey(type: APIKeyTypes) -> String? {
         guard let path = Bundle.main.path(forResource: "Info", ofType: ".plist") else { return nil }
-        
         do {
             let value = try NSDictionary(contentsOf: URL(fileURLWithPath: path), error: ())
             guard
-                let keys = value.object(forKey: "APIKeys") as?
-                    NSDictionary,
+                let keys = value.object(forKey: "APIKeys") as? NSDictionary,
                 let TMDBKey = keys.value(forKey: type.rawValue) as? String
             else { return nil }
             return TMDBKey

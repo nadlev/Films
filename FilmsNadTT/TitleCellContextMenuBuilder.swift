@@ -24,7 +24,7 @@ struct TitleCellContextMenuBuilder {
     
     func configureContextMenuForCell(at indexPath: IndexPath) -> UIContextMenuConfiguration {
         return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
-            return UIMenu(title: "")
+            return UIMenu(title: "", children: setupActionsForCell(at: indexPath))
         }
     }
     

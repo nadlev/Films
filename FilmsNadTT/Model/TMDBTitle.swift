@@ -7,11 +7,13 @@
 
 import Foundation
 
+// MARK: - TitlesResult
+
 struct TitlesResult: Decodable {
     let page: Int?
     let results: [TMDBTitle]?
     let totalPages, totalResults: Int?
-    
+
     enum CodingKeys: String, CodingKey {
         case page, results
         case totalPages = "total_pages"
@@ -19,9 +21,12 @@ struct TitlesResult: Decodable {
     }
 }
 
+// MARK: - Result
+
 struct TMDBTitle: Decodable {
     let id: Int
     let backdropPath, firstAirDate: String?
+//    let genreIDS: [Int]?
     let name: String?
     let originalName, originalTitle, overview: String?
     let popularity: Double?
@@ -32,6 +37,7 @@ struct TMDBTitle: Decodable {
     enum CodingKeys: String, CodingKey {
         case backdropPath = "backdrop_path"
         case firstAirDate = "first_air_date"
+//        case genreIDS = "genre_ids"
         case id
         case name
         case originalName = "original_name"
@@ -57,3 +63,5 @@ struct TMDBTitle: Decodable {
         self.voteCount = Int(titleStorageModel.voteCount)
     }
 }
+
+

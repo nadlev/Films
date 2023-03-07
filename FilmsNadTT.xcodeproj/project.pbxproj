@@ -27,10 +27,10 @@
 		EB5614DA29B2218A009D8D28 /* BookmarksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614D929B2218A009D8D28 /* BookmarksRouter.swift */; };
 		EB5614DC29B22196009D8D28 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614DB29B22196009D8D28 /* BookmarksViewController.swift */; };
 		EB5614DE29B221A4009D8D28 /* BookmarksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614DD29B221A4009D8D28 /* BookmarksViewModel.swift */; };
+		EB5614E029B53650009D8D28 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614DF29B53650009D8D28 /* BookmarkTableViewCell.swift */; };
+		EB5614E229B53660009D8D28 /* BookmarkCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5614E129B53660009D8D28 /* BookmarkCellViewModel.swift */; };
 		EBE998B62987EBD400C1D275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE998B52987EBD400C1D275 /* AppDelegate.swift */; };
 		EBE998B82987EBD400C1D275 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE998B72987EBD400C1D275 /* SceneDelegate.swift */; };
-		EBE998BA2987EBD400C1D275 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE998B92987EBD400C1D275 /* ViewController.swift */; };
-		EBE998BD2987EBD400C1D275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE998BB2987EBD400C1D275 /* Main.storyboard */; };
 		EBE998C02987EBD400C1D275 /* FilmsNadTT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBE998BE2987EBD400C1D275 /* FilmsNadTT.xcdatamodeld */; };
 		EBE998C22987EBDC00C1D275 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE998C12987EBDC00C1D275 /* Assets.xcassets */; };
 		EBE998C52987EBDC00C1D275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE998C32987EBDC00C1D275 /* LaunchScreen.storyboard */; };
@@ -83,11 +83,11 @@
 		EB5614D929B2218A009D8D28 /* BookmarksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksRouter.swift; sourceTree = "<group>"; };
 		EB5614DB29B22196009D8D28 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
 		EB5614DD29B221A4009D8D28 /* BookmarksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewModel.swift; sourceTree = "<group>"; };
+		EB5614DF29B53650009D8D28 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		EB5614E129B53660009D8D28 /* BookmarkCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCellViewModel.swift; sourceTree = "<group>"; };
 		EBE998B22987EBD400C1D275 /* FilmsNadTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmsNadTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE998B52987EBD400C1D275 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE998B72987EBD400C1D275 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBE998B92987EBD400C1D275 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EBE998BC2987EBD400C1D275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBE998BF2987EBD400C1D275 /* FilmsNadTT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FilmsNadTT.xcdatamodel; sourceTree = "<group>"; };
 		EBE998C12987EBDC00C1D275 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBE998C42987EBDC00C1D275 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,16 +163,14 @@
 				EBE998D42987EE5B00C1D275 /* AssemblyBuilder.swift */,
 				EBE999612991458500C1D275 /* TitleCellActionsBuilder.swift */,
 				EBE999632991459F00C1D275 /* TitleCellContextMenuBuilder.swift */,
-				EBE998D32987EC4F00C1D275 /* Model */,
-				EBE998D22987EC4900C1D275 /* View */,
-				EBE998D12987EC3C00C1D275 /* ViewModel */,
 				EBE998D02987EC3100C1D275 /* AppFile */,
 				EBE998CF2987EC2300C1D275 /* Protocol */,
+				EBE998D12987EC3C00C1D275 /* ViewModel */,
 				EBE998CE2987EC1800C1D275 /* Service */,
+				EBE998D22987EC4900C1D275 /* View */,
+				EBE998D32987EC4F00C1D275 /* Model */,
 				EBE998CD2987EC0B00C1D275 /* Extension */,
 				EBE998CC2987EBEF00C1D275 /* Supporting */,
-				EBE998B92987EBD400C1D275 /* ViewController.swift */,
-				EBE998BB2987EBD400C1D275 /* Main.storyboard */,
 				EBE998C62987EBDC00C1D275 /* Info.plist */,
 				EBE998BE2987EBD400C1D275 /* FilmsNadTT.xcdatamodeld */,
 			);
@@ -380,6 +378,8 @@
 		EBE9990D298D39D700C1D275 /* BookmarkTitleCell */ = {
 			isa = PBXGroup;
 			children = (
+				EB5614DF29B53650009D8D28 /* BookmarkTableViewCell.swift */,
+				EB5614E129B53660009D8D28 /* BookmarkCellViewModel.swift */,
 			);
 			path = BookmarkTitleCell;
 			sourceTree = "<group>";
@@ -453,7 +453,6 @@
 			files = (
 				EBE998C52987EBDC00C1D275 /* LaunchScreen.storyboard in Resources */,
 				EBE998C22987EBDC00C1D275 /* Assets.xcassets in Resources */,
-				EBE998BD2987EBD400C1D275 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,7 +467,6 @@
 				EBE998F0298BCCBF00C1D275 /* TitlesHeaderViewViewModel.swift in Sources */,
 				EB5614C829B1352D009D8D28 /* TitlePageViewModel.swift in Sources */,
 				EB5614C029B0AF0A009D8D28 /* SearchViewModel.swift in Sources */,
-				EBE998BA2987EBD400C1D275 /* ViewController.swift in Sources */,
 				EBE998F4298BCEBA00C1D275 /* TitleActionsViewModelProtocol.swift in Sources */,
 				EBE99906298D076D00C1D275 /* Extension + CAGradientLayer.swift in Sources */,
 				EBE99901298BD1B000C1D275 /* TMDBAPIManager.swift in Sources */,
@@ -499,6 +497,7 @@
 				EB5614D429B2215B009D8D28 /* UpcomingTitlesViewModel.swift in Sources */,
 				EB5614BE29B0AEF6009D8D28 /* SearchViewController.swift in Sources */,
 				EB5614C229B0D353009D8D28 /* TitlePreviewCellViewModel.swift in Sources */,
+				EB5614E029B53650009D8D28 /* BookmarkTableViewCell.swift in Sources */,
 				EB5614CE29B1F96E009D8D28 /* YouTubeAPIManager.swift in Sources */,
 				EBE998B62987EBD400C1D275 /* AppDelegate.swift in Sources */,
 				EBE99912298D3DEE00C1D275 /* TitlesGroupCellViewModel.swift in Sources */,
@@ -511,6 +510,7 @@
 				EBE998EB298BCB9000C1D275 /* HomePageViewModel.swift in Sources */,
 				EB5614BA29B0AED4009D8D28 /* TitleSearchResultViewModel.swift in Sources */,
 				EBE998F6298BD07C00C1D275 /* StorageManager.swift in Sources */,
+				EB5614E229B53660009D8D28 /* BookmarkCellViewModel.swift in Sources */,
 				EBE99908298D394300C1D275 /* MainTabBarController.swift in Sources */,
 				EB5614B829B0AEC2009D8D28 /* TitleSearchResultController.swift in Sources */,
 				EB5614D629B2216C009D8D28 /* UpcomingTitlesViewController.swift in Sources */,
@@ -520,14 +520,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EBE998BB2987EBD400C1D275 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBE998BC2987EBD400C1D275 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EBE998C32987EBDC00C1D275 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -665,7 +657,6 @@
 				INFOPLIST_FILE = FilmsNadTT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -693,7 +684,6 @@
 				INFOPLIST_FILE = FilmsNadTT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

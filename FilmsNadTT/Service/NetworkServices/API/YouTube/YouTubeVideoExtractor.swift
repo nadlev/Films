@@ -31,7 +31,8 @@ class YouTubeVideoExtractor {
             scheme: YouTubeVideoURLBase.scheme.rawValue,
             host: YouTubeVideoURLBase.host.rawValue,
             path: YouTubeVideoInfoType.video(id: id).path,
-            queryParameters: nil) else { return }
+            queryParameters: nil
+        ) else { return }
         completion(url)
     }
 }

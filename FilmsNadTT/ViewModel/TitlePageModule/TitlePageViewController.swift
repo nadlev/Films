@@ -10,6 +10,8 @@ import WebKit
 
 class TitlePageViewController: UIViewController {
     
+    //MARK: Properties
+    
     var viewModel: TitlePageViewModelProtocol! {
         didSet {
             viewModel.viewModelDidChange = { [unowned self] changedModel in
@@ -18,6 +20,9 @@ class TitlePageViewController: UIViewController {
             updateUI()
         }
     }
+    
+    //MARK: - View
+    
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +64,7 @@ class TitlePageViewController: UIViewController {
     }()
     
     private lazy var titleOverviewLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.textColor = .lightGray
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -74,7 +79,13 @@ class TitlePageViewController: UIViewController {
     
     private lazy var closeButton: UIButton = {
         let button = UIButton()
-        let image = UIImage(systemName: "xmark", withConfiguration: UIImage.SymbolConfiguration(pointSize: 25, weight: .semibold))
+        let image = UIImage(
+            systemName: "xmark",
+            withConfiguration: UIImage.SymbolConfiguration(
+                pointSize: 25,
+                weight: .semibold
+            )
+        )
         button.setImage(image, for: .normal)
         button.tintColor = .label
         button.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
@@ -83,10 +94,11 @@ class TitlePageViewController: UIViewController {
     }()
     
     private lazy var bookmarkButton: UIButton = {
-        let button = UIButton ()
-        button.tintColor = .orange
+        let button = UIButton()
+        button.tintColor = UIColor(named: "AccentColor")
         button.backgroundColor = .black
         button.layer.borderColor = UIColor.orange.cgColor
+        button.layer.borderWidth = 2
         button.clipsToBounds = true
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(bookmarksButtonTapped), for: .touchUpInside)
@@ -116,11 +128,15 @@ class TitlePageViewController: UIViewController {
     
     private lazy var trailerBlockLabel = setupSectionLabel(text: "Trailer")
     
+    //MARK: - View Controller Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setConstraints()
     }
+    
+    //MARK: - Ations
     
     @objc private func closeButtonTapped() {
         viewModel.closeTitlePage()
@@ -129,6 +145,8 @@ class TitlePageViewController: UIViewController {
     @objc private func bookmarksButtonTapped() {
         viewModel.toggleFavouriteStatus()
     }
+    
+    //MARK: - Private methods
     
     private func updateUI() {
         titleNameLabel.text = viewModel.titleName
@@ -150,8 +168,9 @@ class TitlePageViewController: UIViewController {
     
     private func updateImages() {
         viewModel.fetchPosterImage { [unowned self] imageData in
-            guard let imageData = imageData,
-                  let posterImage = UIImage(data: imageData)
+            guard
+                let imageData = imageData,
+                let posterImage = UIImage(data: imageData)
             else { return }
             posterImageView.image = posterImage
             backgroundView.setImage(posterImage)
@@ -165,7 +184,7 @@ class TitlePageViewController: UIViewController {
     }
     
     private func setupBookmarkButton() {
-        let image = viewModel.isFavourite ? UIImage(systemName: "bookmark.fill") : UIImage(systemName: "bookmark")
+        let image = viewModel.isFavourite ? UIImage(systemName: "heart.circle.fill") : UIImage(systemName: "heart.circle")
         bookmarkButton.setImage(image, for: .normal)
     }
     
@@ -176,6 +195,8 @@ class TitlePageViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }
+    
+    //MARK: - Constraints
     
     private func setConstraints() {
         setScrollViewConstraints()
@@ -316,3 +337,4 @@ class TitlePageViewController: UIViewController {
         NSLayoutConstraint.activate(webViewConstraints)
     }
 }
+

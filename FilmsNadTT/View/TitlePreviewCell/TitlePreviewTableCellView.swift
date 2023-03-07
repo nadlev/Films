@@ -15,7 +15,7 @@ class TitlePreviewTableViewCell: UITableViewCell {
     
     var viewModel: TitlePreviewCellViewModelProtocol! {
         didSet {
-        
+            updateUI()
         }
     }
     
@@ -56,7 +56,7 @@ class TitlePreviewTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -66,7 +66,8 @@ class TitlePreviewTableViewCell: UITableViewCell {
     private func updateUI() {
         titleNameLabel.text = viewModel.titleName
         titleOverviewLabel.text = viewModel.overview
-        
+        updateTitleVoteAverageLabel()
+        updatePosterImage()
     }
     
     private func updatePosterImage() {
@@ -138,6 +139,6 @@ class TitlePreviewTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate(posterImageViewConstraints)
         NSLayoutConstraint.activate(voteAverageLabelConstraints)
         NSLayoutConstraint.activate(titleNameLabelConstraints)
-        NSLayoutConstraint.activate(titleNameLabelConstraints)
+        NSLayoutConstraint.activate(titleOverviewLabelConstraints)
     }
 }
